@@ -83,15 +83,15 @@ func Opcion2() {
 	fmt.Println(".... SEGUNDA OPCIÓN .... ")
 	fmt.Println("Ingrese un número para sumar del 1 hasta ese número ingresado: ")
 
-	var n int
-	fmt.Scan(&n)
+	var num int
+	fmt.Scan(&num)
 
 	var acumulador int
-	for contador := 1; contador <= n; contador++ {
+	for contador := 1; contador <= num; contador++ {
 		acumulador = acumulador + contador
 	}
 
-	fmt.Println("La suma de 1 hasta el numero ingresado:", n, "es: ", acumulador)
+	fmt.Println("La suma de 1 hasta el numero ingresado:", num, "es: ", acumulador)
 }
 
 func Opcion3() {
