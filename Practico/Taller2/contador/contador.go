@@ -1,29 +1,33 @@
 package contador
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
 
 func ContarVocales() {
-	var texto string
+	lector := bufio.NewReader(os.Stdin)
 
 	fmt.Println("*** CONTADOR DE VOCALES ***")
-	fmt.Println("Ingrese una palabra o texto (sin espacios): ")
-	fmt.Scan(&texto)
+	fmt.Println("Ingrese una frase: ")
+	texto, _ := lector.ReadString('\n')
+	texto = strings.TrimSpace(texto)
 
 	var cantA, cantE, cantI, cantO, cantU int
 
-	for i := 0; i < len(texto); i++ {
-		letra := texto[i]
-
+	for _, letra := range texto {
 		switch letra {
-		case 'a', 'A':
+		case 'a', 'á', 'A', 'Á':
 			cantA++
-		case 'e', 'E':
+		case 'e', 'é', 'E', 'É':
 			cantE++
-		case 'i', 'I':
+		case 'i', 'í', 'I', 'Í':
 			cantI++
-		case 'o', 'O':
+		case 'o', 'ó', 'O', 'Ó':
 			cantO++
-		case 'u', 'U':
+		case 'u', 'ú', 'ü', 'U', 'Ú', 'Ü':
 			cantU++
 		}
 	}

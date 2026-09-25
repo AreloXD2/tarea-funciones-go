@@ -10,7 +10,7 @@ func main() {
 	var entrada int
 
 	for {
-		fmt.Println(".... MENÚ PRINCIPAL ....")
+		fmt.Println("*** MENÚ PRINCIPAL ****")
 		fmt.Println("1. Dólares a Euros")
 		fmt.Println("2. Dólares a Libras Esterlinas")
 		fmt.Println("3. Dólares a Won (Surcoreano)")
@@ -19,10 +19,10 @@ func main() {
 		fmt.Println("0. Salir")
 
 		fmt.Print("Ingrese su opción: ")
-		fmt.Scan(&entrada)
+		fmt.Scanln(&entrada)
 
 		if entrada == 0 {
-			fmt.Println("Saliendo del programa...")
+			fmt.Println("Fin del programa.")
 			break
 		}
 
